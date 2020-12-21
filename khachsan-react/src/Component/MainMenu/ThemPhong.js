@@ -9,7 +9,7 @@ export default class UploadFile extends Component {
     form: { ten_phong: "", gia_phong: "", image: "" },
     btnName: "Save",
     btnClass: "btn btn success",
-    url: "http://localhost/TestUpFile/khachsan-laravel/public/api/rooms",
+    url: "http://localhost/CuoiKi/web/khachsan-laravel/public/api/rooms",
   };
   constructor(props) {
     super(props);

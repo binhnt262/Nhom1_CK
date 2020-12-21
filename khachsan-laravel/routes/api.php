@@ -18,4 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::resource('rooms', 'RoomController')->except(['create','edit']);
+Route::resource('customers', 'CustomerController')->except(['create','edit']);
+Route::resource('feedback', 'FeedBackController')->except(['create','edit']);
 

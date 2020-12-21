@@ -8,7 +8,7 @@ class UploadFilesService {
     formData.append("ten_phong", ten);
     formData.append("gia_phong", gia);
     // debugger
-    return http.post("/TestUpFile/khachsan-laravel/public/api/rooms", formData, {
+    return http.post("/CuoiKi/web/khachsan-laravel/public/api/rooms", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -17,7 +17,7 @@ class UploadFilesService {
   }
 
   getFiles() {
-      var img = http.get("/TestUpFile/khachsan-laravel/public/api/rooms")
+      var img = http.get("/CuoiKi/web/khachsan-laravel/public/api/rooms")
     return img;
   
   }
