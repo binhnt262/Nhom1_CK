@@ -9,7 +9,7 @@ import UploadService from "../MainMenu/Upload-files";
 
   
 
- class MainMenu extends Component {
+export class MainMenu extends Component {
   
   state={
     customer: {},
@@ -59,33 +59,35 @@ formValidation = ()=>{
   return true;
   
 }
-onFormSubmit = event=>{
-  event.preventDefault();
-  if(this.formValidation()){
-      this.props.onFormSubmit(this.state.form);
-  };
-}
-getCustomers = async () =>{
+// onFormSubmit = event=>{
+//   event.preventDefault();
+//   if(this.formValidation()){
+//     debugger
+//       this.props.onFormSubmit(this.state.form);
+//   };
+//   debugger
+// }
+// getCustomers = async () =>{
       
-      const customers = await axios.get(this.state.url);
-      this.setState({customers: customers.data});
-    }
-    createCustomer = async data=>{
-      this.setState({loader:true});
-      await axios.post(this.state.url,{
-        email: data.email,
-        ho_ten: data.ho_ten,
-        ngay_den: data.ngay_den,
-        ngay_di: data.ngay_di,
-        sdt: data.sdt
-      });
-      this.getCustomers();
-  }
-  onFormSubmit = data =>{
-      // console.log("app", data);
-      this.createCustomer(data);
-      alert("Đặt phòng thành công!");
-   }
+//       const customers = await axios.get(this.state.url);
+//       this.setState({customers: customers.data});
+//     }
+//     createCustomer = async data=>{
+//       this.setState({loader:true});
+//       await axios.post(this.state.url,{
+//         email: data.email,
+//         ho_ten: data.ho_ten,
+//         ngay_den: data.ngay_den,
+//         ngay_di: data.ngay_di,
+//         sdt: data.sdt
+//       });
+//       this.getCustomers();
+//   }
+//   onFormSubmit = data =>{
+//       // console.log("app", data);
+//       this.createCustomer(data);
+//       alert("Đặt phòng thành công!");
+//    }
   renderButton = ()=>{ 
     return(
     <div className="row">
@@ -206,7 +208,7 @@ datphongClick = ()=>{
                 <div className="portfolio-caption">
                   <div className="portfolio-caption-heading">{this.props.tieude}</div>
                   <div className="portfolio-caption-subheading text-muted">{this.props.giatien}</div>
-                {this.displaycheck()}
+                 {this.displaycheck()}
                 </div>
                 </div>
               </div>

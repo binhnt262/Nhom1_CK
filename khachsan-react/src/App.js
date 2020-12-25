@@ -7,13 +7,14 @@ import Header from './Component/Header/Header.js';
 import TrangChu from './Component/Trangchu/TrangChu.js';
 import MainMenu from './Component/MainMenu/MainMenu.js';
 import Lienhe from './Component/Lienhe/LienHe.js';
-import Donggop from './Component/Donggop/Donggop';
+// import Phanhoi from './Component/Donggop/Phanhoi';
 import MenuGT from './Component/MenuGT/MenuGT.js';
 import MenuDP from './Component/MenuDP/MenuDP.js';
 import MenuTC from './Component/MenuTC/MenuTC.js';
 import MenuLH from './Component/MenuLH/MenuLH';
 
 import UploadService from "./Component/MainMenu/Upload-files";
+import Phanhoi from './Component/Donggop/Phanhoi';
 class App extends Component {
   constructor(props){
     super(props);
@@ -21,27 +22,47 @@ class App extends Component {
       fileInfos: [1]
     }
   }
+  // state = {
+  //   url = "http://localhost/Cuoiki/web/khachsan-laravel/public/api/feedback"
+  // }
+  // getFeedbacks = async()=>{
+  //   const feedback = await axios.get(this.state.url);
+  //   this.setState({feedback:feedback.data})
+  // }
+  // createFeedback = async(data)=>{
+  //   await axios.post(this.setState.url,{
+  //     name:data.name,
+  //     email:data.email,
+  //     sdt:data.sdt,
+  //     content:data.content
+  //   });
+  // }
+  // componentWillMount(){
+  //   this.getFeedbacks(id);
+  // }
+  // thongbao = (data)=>{
+  //   this.createFeedback(data);
+  // }
   componentWillMount() {
     UploadService.getFiles().then((response) => {
       
       console.log("List data is: "+response.data);
-      debugger
+     
       this.setState({
         fileInfos: response.data,
       });
-      debugger
+  
     });
   }
   // state = {
   //   customers:[],
   //   customer:{},
   //   loader:false,
-  //   url:"http://localhost/Cuoiki/web/khachsan-laravel/public/api/rooms"
+  //   url:"http://localhost/Cuoiki/web/khachsan-laravel/public/api/customers"
   // }
 //   getCustomers = async () =>{
-//     this.setState({loader:true});
 //     const customers = await axios.get(this.state.url);
-//     this.setState({customers: customers.data, loader:false});
+//     this.setState({customers: customers.data});
 //   }
 //   createCustomer = async data=>{
 //     this.setState({loader:true});
@@ -54,7 +75,11 @@ class App extends Component {
 //     });
 //     this.getCustomers();
 // }
-// onFormSubmit = data =>{
+// componentDidMount() {
+//   this.getCustomers();
+// }
+
+// onFormSubmit = (data) =>{
 //     // console.log("app", data);
 //     this.createCustomer(data);
 //     alert("Đặt phòng thành công!");
@@ -109,7 +134,7 @@ class App extends Component {
         <Lienhe anh="assets/img/team/6.jpg" ten="Đoàn Thị Bích Ngọc" chucvu="Chăm sóc khách hàng" sdt="055599999" icon1={<a className="btn btn-dark btn-social mx-2" href="https://www.facebook.com/NTBYBTD170618/"><i className="fab fa-facebook-f" /></a>} icon2={ <a className="btn btn-dark btn-social mx-2" href="https://www.instagram.com/binh_boong_262/?hl=vi"><i className="fab fa-linkedin-in" /></a>}/>
         </div>
         </div>
-       <Donggop/>
+       <Phanhoi/>
       </div>
     );
   }
