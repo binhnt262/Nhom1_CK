@@ -17,7 +17,7 @@ function MenuDP () {
                   <div className="btn">
                     <button onClick={()=>setModalIsOpen(true)} className="btn btn-warning">Thêm phòng</button>
                        <Modal isOpen={modalIsOpen}>
-                       <UploadFiles  style={{marginTop:"100px"}}/>
+                       <UploadFiles  style={{marginTop:"200px"}}/>
                       <button onClick={()=> setModalIsOpen(false)} className="bt btn-info" style={{marginLeft:'1190px'}}>Close</button>
                      </Modal>
                     

@@ -6,8 +6,8 @@ class MenuGT extends Component {
             <div className="col-lg-12">
             <section class="page-section" id="services">
                 <div className="gt">
-                  <h2 class="section-heading text-uppercase">{this.props.gioithieu}</h2>
-                  <h3 class="section-subheading text-muted">{this.props.gioithieu2}</h3>
+                  <h2 className="section-heading text-uppercase">{this.props.gioithieu}</h2>
+                  <h3 className="section-subheading text-muted">{this.props.gioithieu2}</h3>
                   </div>
            </section>
            </div>

@@ -103,7 +103,10 @@ class App extends Component {
 
         {this.state.fileInfos.map(item => (
             <MainMenu anh={"assets/img/portfolio"+"/"+item.image} tieude={item.ten_phong} giatien={item.gia_phong}/>
-          ))}
+            
+         ))
+         }
+         
 
         {/* {this.state.fileInfos.map((person, index) => (
           <MainMenu anh="assets/img/portfolio/p1.jpg" tieude="Phòng đơn" giatien="750.000/đêm"/>

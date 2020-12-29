@@ -127,7 +127,7 @@ export default class UploadFile extends Component {
       giaPhong,
     } = this.state;
     return (
-      <div>
+      <div style={{marginTop:"100px"}}>
         {currentFile && (
           <div className="progress">
             <div
@@ -159,7 +159,7 @@ export default class UploadFile extends Component {
           {message}
         </div>
 
-        <div className="card">
+        <div className="card" >
           {/* <div className="card-header">List of Files</div> */}
           <ul className="list-group list-group-flush">
             {fileInfos &&
